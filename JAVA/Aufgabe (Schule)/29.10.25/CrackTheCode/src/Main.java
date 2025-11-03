@@ -9,7 +9,10 @@ public class Main {
         System.out.println("You will be given a randomly generated four digit code and you will have to guess it in 5 attempts. If you can guess it till the end than you will loose the game, but if you can guess it correctly you have won.");
 
         Random random = new Random();
-        int randomnumber = 1000 + random.nextInt(9000);
+        int randomnumber =  0 + random.nextInt(9);
+        int randomnumber1 = 0 + random.nextInt(9);
+        int randomnumber2 = 0 + random.nextInt(9);
+        int randomnumber3 = 0 + random.nextInt(9);
 
         System.out.println("You now have five attempts to guess the random code from 0-9");
         int guess = userInput.nextInt();
