@@ -1,9 +1,10 @@
+import java.time.Year;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Scanner userInput = new Scanner (System.in);
+        Scanner userInput = new Scanner(System.in);
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 01");
         // 01. Solve this exercise with the help of both, the old switch-statement and the new switch expression.
@@ -35,6 +36,8 @@ public class Main {
             case 7:
                 System.out.println("Sunday");
                 break;
+            default:
+                System.out.println("Its not a weekday");
         }
 
         switch (day) {
@@ -45,6 +48,8 @@ public class Main {
             case 5 -> System.out.println("Friday");
             case 6 -> System.out.println("Saturday");
             case 7 -> System.out.println("Sunday");
+
+            default -> System.out.println("Its not a weekday");
         }
 
 
@@ -63,9 +68,9 @@ public class Main {
         String month = userInput.nextLine();
 
         switch (month) {
+            case "December":
             case "January":
             case "February":
-            case "December":
                 System.out.println("Winter");
                 break;
             case "March":
@@ -96,14 +101,13 @@ public class Main {
         }
 
 
-
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 03");
         // 03. Solve this exercise with the help of both, the old switch-statement and the new switch expression.
         //     Create a program that takes a month number (1-12) and prints the number of days in that month.
         //     Assume it's not a leap year.
 
-        System.out.println("Write down a the Month you choose in numbers");
+        System.out.println("Write down a month you choose in numbers");
         byte monthNumber = userInput.nextByte();
 
         switch (monthNumber) {
@@ -113,7 +117,7 @@ public class Main {
             case 8:
             case 10:
             case 12:
-                System.out.println("These months only have 30 Days");
+                System.out.println("This month only has 30 Days");
                 break;
             case 1:
             case 3:
@@ -121,8 +125,14 @@ public class Main {
             case 7:
             case 9:
             case 11:
-                System.out.println("These Months have 31 Days");
+                System.out.println("This month has 31 Days");
                 break;
+        }
+
+        switch (monthNumber) {
+            case 2, 4, 6, 8, 10, 12 -> System.out.println("This month only has 30 Days");
+            case 1, 3, 5, 7, 9, 11 -> System.out.println("This month has 31 Days");
+
         }
 
 
@@ -135,6 +145,22 @@ public class Main {
         //      User Input: 2
         //      Output: "Mage (Strength: 3, Agility: 4, Intelligence: 9)"
 
+
+        System.out.println("Choose a class");
+        System.out.println("1. Warrior");
+        System.out.println("2. Mage");
+        System.out.println("3. Rouge");
+        System.out.println("4. Cleric");
+
+        userInput.nextLine();
+        String classes = userInput.nextLine();
+
+        switch (classes) {
+            case "Warrior" -> System.out.println("Strength: 8, Agility: 3, Intelligence: 3");
+            case "Mage" -> System.out.println("Strength: 3, Agility: 4, Intelligence: 9");
+            case "Rouge" -> System.out.println("Strength: 4, Agility: 7, Intelligence: 5");
+            case "Cleric" -> System.out.println("Strength: 3, Agility: 5; intelligence: 5");
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 05");
@@ -161,6 +187,70 @@ public class Main {
         //      9: kyuu
         //      default: Mukō na sūchi
 
+        System.out.println("Which digit do you want to translate? 0-9");
+        byte translateDigit = userInput.nextByte();
+        System.out.println("In which language do you want to translate it? 1-german, 2-english, 3-japanese");
+        userInput.nextLine();
+        String translateLanguage = userInput.nextLine();
+
+        switch (translateLanguage) {
+            case "german" -> {
+
+                switch (translateDigit) {
+                    case 0 -> System.out.println("0: null ");
+                    case 1 -> System.out.println("1: ein");
+                    case 2 -> System.out.println("2: zwei");
+                    case 3 -> System.out.println("3: drei");
+                    case 4 -> System.out.println("4: vier");
+                    case 5 -> System.out.println("5: fünf");
+                    case 6 -> System.out.println("6: sechs");
+                    case 7 -> System.out.println("7: sieben");
+                    case 8 -> System.out.println("8: acht");
+                    case 9 -> System.out.println("9: neun");
+                }
+            }
+
+
+        }
+
+        switch (translateLanguage) {
+            case "english" -> {
+
+                switch (translateDigit) {
+                    case 0 -> System.out.println("0: zero");
+                    case 1 -> System.out.println("1: one");
+                    case 2 -> System.out.println("2: two");
+                    case 3 -> System.out.println("3: three");
+                    case 4 -> System.out.println("4: four");
+                    case 5 -> System.out.println("5: five");
+                    case 6 -> System.out.println("6: six");
+                    case 7 -> System.out.println("7: seven");
+                    case 8 -> System.out.println("8: eight");
+                    case 9 -> System.out.println("9: nine");
+                }
+            }
+        }
+
+        switch (translateLanguage) {
+            case "japanese" -> {
+
+                switch (translateDigit) {
+                    case 0 -> System.out.println("0: zero");
+                    case 1 -> System.out.println("1: ichi");
+                    case 2 -> System.out.println("2: ni");
+                    case 3 -> System.out.println("3: san");
+                    case 4 -> System.out.println("4: shi");
+                    case 5 -> System.out.println("5: go");
+                    case 6 -> System.out.println("6: roku");
+                    case 7 -> System.out.println("7: nana");
+                    case 8 -> System.out.println("8: hachi");
+                    case 9 -> System.out.println("9: kyuu");
+                }
+            }
+        }
+
+
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 06");
@@ -169,6 +259,25 @@ public class Main {
         //      Calculate the correct answer and print it out.
         //      Print a warning when the user tries to divide by 0 (Example: 2/0 -> number two must not be 0!
 
+        System.out.println("Whit which two numbers do you want to calculate? Please note that you won't be able to divide by 0");
+        float calcNumber1 = userInput.nextFloat();
+        float calcNumber2 = userInput.nextFloat();
+        System.out.println("Do you want to do 1-addition 2-subtraction 3-division 4-multiplication");
+        userInput.nextLine();
+        String operation = userInput.nextLine();
+
+        switch (operation) {
+            case "addition" -> System.out.println(calcNumber1 + calcNumber2);
+            case "subtraction" -> System.out.println(calcNumber1 - calcNumber2);
+            case "division" -> {
+                if (calcNumber2 == 0) {
+                    System.out.println("Can't divide by 0");
+                } else {
+                    System.out.println(calcNumber1 / calcNumber2);
+                }
+            }
+            case "multiplication" -> System.out.println(calcNumber1 * calcNumber2);
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Optional exercises");
