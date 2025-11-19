@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -18,45 +20,72 @@ public class Main {
 
 
         for (int years = 0; years <= 2025; years++) {
-            if (years % 4 == 0 ||(years%100 ==0 && years%400 ==0)) {
-                System.out.println( years + " is a Leap Year");
+            if (years % 4 == 0 || (years % 100 == 0 && years % 400 == 0)) {
+                System.out.println(years + " is a Leap Year");
             } else {
                 System.out.println(years + " is not a Leap Year");
             }
         }
 
-            //--------------------------------------------------------------------------------------------------------------
-            System.out.println("Exercise 02");
-            // 02.  Print out all numbers from 1-10.
-            //      If a number is divisible by three, then print "Fizz".
-            //      If a number is divisible by five, then print "Buzz".
-            //      If a number is divisible by three and five, print "FizzBuzz".
+        //--------------------------------------------------------------------------------------------------------------
+        System.out.println("Exercise 02");
+        // 02.  Print out all numbers from 1-10.
+        //      If a number is divisible by three, then print "Fizz".
+        //      If a number is divisible by five, then print "Buzz".
+        //      If a number is divisible by three and five, print "FizzBuzz".
 
         for (int numbers = 0; numbers <= 15; numbers++) {
             if (numbers % 3 == 0 && (numbers % 5 == 0)) {
-                System.out.println( numbers+":" +" FizzBuzz");
+                System.out.println(numbers + ":" + " FizzBuzz");
             } else if (numbers % 5 == 0) {
-                System.out.println(numbers+":" + " Buzz");
+                System.out.println(numbers + ":" + " Buzz");
             } else if (numbers % 3 == 0) {
-                System.out.println(numbers+":" + " Fizz");
+                System.out.println(numbers + ":" + " Fizz");
             } else {
-                System.out.println(numbers+ ":" +" not possible");
+                System.out.println(numbers + ":" + " not possible");
             }
         }
 
 
-            //--------------------------------------------------------------------------------------------------------------
-            System.out.println("Exercise 03");  // Challenge!
-            // 03.  Given a number n (n > 2 && n < 100), write a program which tells if n is a prime.
-            //      Example: n = 7 -> "It's a prime number!"
-            //      Example: n = 10 -> "It's not a prime number!"
+        //--------------------------------------------------------------------------------------------------------------
+        System.out.println("Exercise 03");  // Challenge!
+        // 03.  Given a number n (n > 2 && n < 100), write a program which tells if n is a prime.
+        //      Example: n = 7 -> "It's a prime number!"
+        //      Example: n = 10 -> "It's not a prime number!"
 
-            int n = 7; // change this value from prime to not prime to test
-            // Your code here
+        int n = 7; // change this value from prime to not prime to test
+        // Your code here
+        Scanner userInput = new Scanner(System.in);
+
+        for (int numbers = 2; numbers >= 2 && numbers <= 100; ) {
+            int primeNumbers = userInput.nextByte();
+            if (primeNumbers % 2 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 2 == 0) {
+                System.out.println("It is not a prime Number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % primeNumbers == 0) {
+                System.out.println("It is a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 3 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 4 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 5 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 6 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 7 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 8 == 0) {
+                System.out.println("It is not a prime number");
+            } else if (primeNumbers % 1 == 0 && primeNumbers % 9 == 0) {
+                System.out.println("It is not a prime number");
 
 
-            //--------------------------------------------------------------------------------------------------------------
-            System.out.println("Exercise 04");  // Challenge+!
-            // 04. Print all prime numbers from 2-100.
+                //--------------------------------------------------------------------------------------------------------------
+                System.out.println("Exercise 04");  // Challenge+!
+                // 04. Print all prime numbers from 2-100.
+
+            }
         }
     }
+}
