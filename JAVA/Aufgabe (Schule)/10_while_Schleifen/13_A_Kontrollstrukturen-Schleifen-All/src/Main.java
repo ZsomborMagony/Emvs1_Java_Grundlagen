@@ -57,35 +57,17 @@ public class Main {
         // Your code here
         Scanner userInput = new Scanner(System.in);
 
-        for (int numbers = 2; numbers >= 2 && numbers <= 100; ) {
-            int primeNumbers = userInput.nextByte();
-            if (primeNumbers % 2 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 2 == 0) {
-                System.out.println("It is not a prime Number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % primeNumbers == 0) {
-                System.out.println("It is a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 3 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 4 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 5 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 6 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 7 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 8 == 0) {
-                System.out.println("It is not a prime number");
-            } else if (primeNumbers % 1 == 0 && primeNumbers % 9 == 0) {
-                System.out.println("It is not a prime number");
+        int primeNumbers = userInput.nextInt();
 
+        for (int numbers = 2;numbers <= primeNumbers; numbers++ ) {
+            if (primeNumbers % numbers != 0) {
+                System.out.println("It is a prime Number");
+            }
 
                 //--------------------------------------------------------------------------------------------------------------
                 System.out.println("Exercise 04");  // Challenge+!
                 // 04. Print all prime numbers from 2-100.
 
-            }
         }
     }
 }
