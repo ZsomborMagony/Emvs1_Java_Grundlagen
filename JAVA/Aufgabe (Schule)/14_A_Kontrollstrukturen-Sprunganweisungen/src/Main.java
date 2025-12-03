@@ -113,8 +113,40 @@ public class Main {
         // exit
         // You have exited the program (Exercise 02)
 
+        userInput.nextLine();
+        String userDifficulty = userInput.nextLine();
+        String exit = "exit";
 
+/*        while(userDifficulty != exit) {
+            System.out.println("You can quit the program by writing 'exit' in the terminal");
+            System.out.println("What is currently troubling you?");
+            userDifficulty = userInput.nextLine();
 
+            if (userDifficulty == "exit") {
+                break;
+            }
+
+            switch (userDifficulty) {
+                case "Money" -> System.out.println("Money can be good and bad aswell");
+                case "money" -> System.out.println("Money can be good and bad aswell");
+                case "MONEY" -> System.out.println("Money can be good and bad aswell");
+                case "Traveling" -> System.out.println("Uff That's a tough one");
+                case "traveling" -> System.out.println("Uff That's a tough one");
+                case "TRAVELING" -> System.out.println("UFF That's a tough one");
+                case "Break up" -> System.out.println("It is a shame but you need to move on with your life");
+                case "BREAK UP" -> System.out.println("It is a shame but you need to move on with your life");
+                case "break up" -> System.out.println("It is a shame but you need to move on with your life");
+                case "breakup" -> System.out.println("It is a shame but you need to move on with your life");
+                case "School" -> System.out.println("You can do it");
+                case "SCHOOL" -> System.out.println("You can do it");
+                case "school" -> System.out.println("You can do it");
+                case "Family" -> System.out.println("It is a difficult time, but you are strong");
+                case "FAMILY" -> System.out.println("It is a difficult time, but you are strong");
+                case "family" -> System.out.println("It is a difficult time, but you are strong");
+
+            }
+        }
+*/
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 03");
         // 03.  Write a program that asks the user for numbers.
@@ -139,6 +171,29 @@ public class Main {
         //      Enter a number (0 to quit):
         //      0
         //      Program ended. You entered 3 numbers. Sum of squares: 29
+
+        int numbersResult = 0;
+        int numbersEntered = 0;
+        int userNumber = 1;
+
+        while(userNumber != 0) {
+            System.out.println("Enter a number (0 to quit)");
+            userNumber = userInput.nextInt();
+            numbersEntered++;
+            numbersResult += userNumber * userNumber;
+            if (userNumber > 0) {
+                System.out.println(userNumber);
+                System.out.println(userNumber * userNumber);
+            } else if (userNumber < 0) {
+                System.out.println("Unsuitable Number");
+                numbersEntered++;
+            } else if (userNumber == 0) {
+                System.out.println("Program ended. You entered " + (numbersEntered -1) + " numbers. Sum of squares: " + numbersResult);
+                break;
+            } else {
+                System.out.println("Invalid Number");
+            }
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
